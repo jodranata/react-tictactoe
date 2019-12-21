@@ -1,0 +1,126 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+  background-image: url('https://source.unsplash.com/random/1920x1080');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background-color: hsla(133, 90%, 8%, 0.5);
+  border: 3px solid rgb(34, 203, 233);
+  float: left;
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 34px;
+  height: 150px;
+  margin-right: -2px;
+  margin-top: -2px;
+  padding: 0;
+  text-align: center;
+  width: 150px;
+  color: rgb(34, 203, 233);
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  margin-top: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-info {
+  position: absolute;
+  left: 5%;
+  color: rgb(34, 203, 233);
+  background-color: rgba(0,0,0,0.5);
+  width: 200px;
+  padding: 25px;
+}
+
+.moves-list {
+  margin: 5px auto;
+  font-size: 24px;
+}
+
+.moves-list button {
+  background-color: transparent;
+  color: rgb(34, 203, 233);
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid rgba(34, 203, 233, 0.8);
+  border-radius: 12px;
+  transition: background 0.1s;
+  cursor: pointer;
+}
+
+.moves-list button:hover {
+  background-color: rgba(34, 203, 233, 0.8);
+  color: whitesmoke;
+}
+
+.moves-list button:active {
+  background-color: rgb(23, 115, 131);
+}
+
+@media screen and (max-width: 780px) {
+  .game {
+    margin-left: 100px;
+  }
+  .game-info {
+    position: absolute;
+    left: 2%;
+    color: rgb(34, 203, 233);
+    background-color: rgba(0,0,0,0.5);
+    width: 175px;
+    padding: 10px;
+  }
+  .square {
+    border: 3px solid rgb(34, 203, 233);
+    font-size: 48px;
+    height: 100px;
+    width: 100px;
+  }
+  .moves-list {
+    margin: 5px auto;
+    font-size: 18px;
+  }
+  
+  .moves-list button {
+    background-color: transparent;
+    color: rgb(34, 203, 233);
+    padding: 8px;
+    font-size: 15px;
+    border: 2px solid rgba(34, 203, 233, 0.8);
+  }
+}
